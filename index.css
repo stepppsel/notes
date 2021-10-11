@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+* {
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background :rgb(199, 198, 198);
+}
+
+.container {
+    min-width : 500px;
+    margin : 0 auto;
+}
+
+header {
+    position : relative;
+    display : grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items : center;
+    align-items : center;
+    padding : 30px;
+}
+
+button {
+    position : relative;
+    display : grid;
+    justify-items: center;
+    align-items: center;
+    color : white;
+    background: darkgreen;
+    font-weight : bold;
+    padding : 12px;
+    font-size: 16px;
+    border : none;
+    outline : none;
+    cursor : pointer;
+    transition : 0.5s ease all;
+}
+
+button:hover {
+    background : greenyellow;
+}
+
+.menu {
+   justify-self: start;
+   margin-left : 10px;
+}
+
+.logo {
+    color :darkslategrey;
+    font-weight : bold;
+    font-size : 20px;
+    justify-self: start;
+    grid-column : 2/11;
+    margin-left : 50px;
+}
+
+.add {
+    position : fixed;
+    bottom : 50px;
+    right : 5%;
+    font-size : 40px;
+    font-weight: lighter;
+    background :rgb(248, 63, 16) ;
+    padding : 8px 20px;
+    border-radius : 10em;
+    transition : 0.5s ease all;
+}
+
+.add:hover {
+    background : rgb(255, 145, 0);
+}
+
+.body {
+    position : relative;
+    min-height : 500px;
+}
+
+.pages {
+    position : fixed;
+    background: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width : 40%;
+    height : 100%;
+    max-height : 500px;
+    left : 0;
+    top : 0;
+}
+
+.pages-data {
+    grid-row: 2/12;
+    height : 100%;
+    width : 100%;
+    display : grid;
+    grid-template-columns: 1fr;
+}
+
+.pages-data button {
+    height : 100%;
+    width : 100%;
+    font-size : 18px;
+    background: rgb(236, 235, 235);;
+    color : black;
+    transition : 0.5s ease all;
+}
+
+.pages-data button:last-child {
+    color : white;
+    background : red;
+}
+
+.pages-data button:last-child:hover {
+    background :rgb(255, 145, 0);
+}
+
+.pages-data button:hover {
+    background: green;
+    color : white;
+}
+
+.pages span {
+    justify-self: start;
+    align-self : start;
+    margin : 20px;
+    font-size : 30px;
+}
+
+.shadow {
+    position : fixed;
+    top : 0;
+    left : 0;
+    height : 100%;
+    width: 100%;
+    background : rgba(0, 0, 0, 0.8);
+}
+
+.shadow-enter-active, .shadow-leave-active {
+    transition : 0.5s ease all;
+}
+
+.shadow-enter-from, .shadow-leave-to {
+    opacity : 0;
+}
+
+.menu-enter-active, .menu-leave-active {
+    transition : 0.5s ease all;
+}
+
+.menu-enter-from, .menu-leave-to {
+    left : -100%;
+}
+
+.all-todos {
+    margin-top : 50px;
+}
+
+.todos {
+    display : grid;
+    grid-template-columns: 1fr;
+    justify-items : center;
+    align-items: center;
+    grid-gap : 50px;
+}
+
+.todo {
+    position : relative;
+    width : 75%;
+    background : white;
+    padding : 30px;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.todo div span {
+    position : absolute;
+    left : 20px;
+    top: 20px;
+    font-weight : bold;
+    font-size : 25px;
+}
+
+.todo p {
+    margin-top : 50px;
+}
+
+.todo-footer {
+    margin-top : 30px;
+}
+
+.todo-footer button {
+    background : red;
+    color : white;
+    position : absolute;
+    right : 20px;
+    bottom : 20px;
+    font-size : 13px;
+    padding : 8px;
+    transition : 0.5s ease all;
+}
+
+.todo-footer button:hover {
+    background : rgb(255, 145, 0);
+}
+
+.popap-parent {
+    position : fixed;
+    display : grid;
+    justify-items : center;
+    align-items : center;
+    top : 0;
+    left : 0;
+    height : 100%;
+    width : 100%;
+    background : rgba(0, 0, 0, 0.8);
+}
+
+.popap-body {
+    position : relative;
+    background : white;
+    height : 300px;
+    width : 400px;
+    padding : 30px;
+    padding-right : 30px;
+}
+
+.input-parent {
+    position : relative;
+    display : grid;
+    justify-items : center;
+    align-items : center;
+    height : 50%;
+    width : 100%;
+}
+
+.input-parent textarea {
+    position : relative;
+    resize: none;
+    padding : 10px;
+    width : 100%;
+    height : 70%;
+    font-size : 20px;
+}
+
+select {
+    width : 50%;
+    position : relative;
+    padding: 20px;
+    font-size : 20px;
+}
+
+.popap-footer {
+    position : relative;
+    margin-top : 40px;
+    display : grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items : end;
+    align-items: center;
+}
+
+.popap-footer button:first-child {
+    background : red;
+    color : white;
+    justify-self: start;
+}
+
+.popup-enter-active, .popup-leave-active {
+    transition : 0.5s ease all;
+}
+
+.popup-enter-from, .popup-leave-to {
+    opacity : 0;
+}
+
+.popap-footer .disabled {
+    opacity : 0.6;
+}
+
+.popap-footer .error:hover {
+    background: rgb(255, 145, 0);
+}
+
+.todo-footer .recover {
+    background : green;
+    right : 100px;
+}
+
+.todo-footer .recover:hover {
+    background : darkgreen;
+}
+
+.search-head {
+    display : grid;
+    align-items : center;
+    justify-items : start;
+    padding : 30px;
+    background :rgb(238, 66, 66);
+    margin-bottom : 30px;
+}
+
+.search-head input {
+    padding : 15px 30px;
+    width : 50%;
+    font-size : 18px;
+    border-radius : 15px;
+    outline : none;
+    border : none;
+}
+
+.pages-data .page-active {
+    background :darkgreen;
+    color : white;
+}
+
+.group {
+    display : grid;
+    position : relative;
+    justify-items: start;
+    align-items : center;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    width: 80%;
+    font-size : 20px;
+    font-weight : bold;
+    background : white;
+    white-space: pre-line;
+    word-wrap: break-word;
+    border : none;
+    border-radius : 10px;
+}
+
+
+.todo-enter-active, .todo-leave-active {
+    transition : 0.5s ease all;
+}
+
+.todo-leave-active {
+    position : absolute;
+}
+
+.todo-enter-from, .todo-leave-to {
+    opacity : 0;
+    transform : scale(0);
+}
+
+.todo-move {
+    transition : 0.5s ease all;
+}
+
+.not-found {
+    position : relative;
+    height : 300px;
+    display : grid;
+    justify-items : center;
+    align-items : center;
+    opacity : 0.8;
+    font-size : 30px;
+}
